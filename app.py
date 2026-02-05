@@ -31,8 +31,13 @@ def load_custom_css():
         footer {visibility: hidden;}
         header {visibility: hidden;}
 
+        /* True black background */
+        html, body, [data-testid="stApp"] {
+            background: #000000 !important;
+        }
+
         .main {
-            background: linear-gradient(135deg, #0f0f1e 0%, #1a1a2e 100%);
+            background: #000000 !important;
             padding: 2rem 1rem;
         }
 
@@ -40,7 +45,7 @@ def load_custom_css():
             font-size: 4.5rem;
             font-weight: 900;
             letter-spacing: -0.05em;
-            background: linear-gradient(135deg, #fff 0%, #a0a0ff 100%);
+            background: linear-gradient(135deg, #ffffff 0%, #a0a0ff 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -53,8 +58,8 @@ def load_custom_css():
             text-align: center;
             font-size: 1.1rem;
             color: rgba(255, 255, 255, 0.7);
-            max-width: 700px;
-            margin: 0 auto 3rem auto;
+            max-width: 760px;
+            margin: 0 auto 2.25rem auto;
             line-height: 1.6;
         }
 
@@ -62,11 +67,11 @@ def load_custom_css():
             max-width: 440px;
             margin: 2rem auto;
             background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.10);
             border-radius: 24px;
             padding: 3rem 2.5rem;
             backdrop-filter: blur(10px);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 10px 38px rgba(0, 0, 0, 0.55);
         }
 
         .auth-title {
@@ -95,7 +100,7 @@ def load_custom_css():
 
         .stTextInput input:focus, .stTextArea textarea:focus {
             border-color: #8b8bff !important;
-            box-shadow: 0 0 0 3px rgba(139, 139, 255, 0.1) !important;
+            box-shadow: 0 0 0 3px rgba(139, 139, 255, 0.12) !important;
         }
 
         .stButton button {
@@ -106,29 +111,30 @@ def load_custom_css():
             padding: 0.75rem 1.5rem !important;
             font-weight: 600 !important;
             font-size: 0.95rem !important;
-            transition: all 0.3s ease !important;
-            box-shadow: 0 4px 12px rgba(107, 107, 255, 0.3) !important;
+            transition: all 0.25s ease !important;
+            box-shadow: 0 4px 14px rgba(107, 107, 255, 0.35) !important;
         }
 
         .stButton button:hover {
             transform: translateY(-2px) !important;
-            box-shadow: 0 6px 20px rgba(107, 107, 255, 0.4) !important;
+            box-shadow: 0 7px 26px rgba(107, 107, 255, 0.45) !important;
         }
 
+        /* Title-only cards (used above inputs) */
         .section-card {
             border: 1px solid rgba(255, 255, 255, 0.12);
-            background: rgba(255, 255, 255, 0.04);
+            background: rgba(255, 255, 255, 0.035);
             border-radius: 20px;
             padding: 1.5rem;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.0rem;
             backdrop-filter: blur(10px);
         }
 
         .section-title {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             font-weight: 700;
             color: white;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.4rem;
         }
 
         .section-subtitle {
@@ -137,22 +143,46 @@ def load_custom_css():
             line-height: 1.5;
         }
 
+        /* Content cards (used for results sections) */
+        .content-card {
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 20px;
+            padding: 1.25rem 1.35rem;
+            margin: 0.5rem 0 1.2rem 0;
+            backdrop-filter: blur(10px);
+        }
+
+        .content-card-title {
+            font-size: 1.15rem;
+            font-weight: 750;
+            color: white;
+            margin-bottom: 0.35rem;
+        }
+
+        .content-card-subtitle {
+            color: rgba(255, 255, 255, 0.62);
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin-bottom: 0.85rem;
+        }
+
         .skill-pill {
             display: inline-block;
             padding: 8px 16px;
             margin: 4px 6px 4px 0;
             border-radius: 999px;
-            border: 1px solid rgba(139, 139, 255, 0.3);
-            background: rgba(107, 107, 255, 0.1);
+            border: 1px solid rgba(139, 139, 255, 0.30);
+            background: rgba(107, 107, 255, 0.10);
             color: #c0c0ff;
             font-size: 0.85rem;
             font-weight: 500;
-            letter-spacing: 0.3px;
+            letter-spacing: 0.2px;
         }
 
         .stMetric {
             background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.10);
             border-radius: 16px;
             padding: 1rem;
         }
@@ -162,7 +192,7 @@ def load_custom_css():
         .stMetric [data-testid="stMetricValue"] {
             color: white !important;
             font-size: 2rem !important;
-            font-weight: 700 !important;
+            font-weight: 750 !important;
         }
 
         .stProgress > div > div {
@@ -172,7 +202,7 @@ def load_custom_css():
 
         .streamlit-expanderHeader {
             background: rgba(255, 255, 255, 0.04) !important;
-            border: 1px solid rgba(255, 255, 255, 0.1) !important;
+            border: 1px solid rgba(255, 255, 255, 0.10) !important;
             border-radius: 12px !important;
             color: white !important;
             font-weight: 600 !important;
@@ -186,7 +216,7 @@ def load_custom_css():
         }
 
         hr {
-            border-color: rgba(255, 255, 255, 0.1) !important;
+            border-color: rgba(255, 255, 255, 0.10) !important;
             margin: 2rem 0 !important;
         }
 
@@ -194,20 +224,20 @@ def load_custom_css():
 
         .user-greeting {
             text-align: center;
-            color: rgba(255, 255, 255, 0.6);
+            color: rgba(255, 255, 255, 0.60);
             font-size: 0.9rem;
-            margin-top: 1rem;
+            margin-top: 0.75rem;
         }
 
-        .user-name { color: #8b8bff; font-weight: 600; }
+        .user-name { color: #8b8bff; font-weight: 650; }
 
-        .logout-container { text-align: right; margin-bottom: 1rem; }
+        .logout-container { text-align: right; margin-bottom: 0.75rem; }
 
         .rewrite-card {
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.10);
             border-radius: 16px;
-            padding: 1.25rem;
-            margin: 1rem 0;
+            padding: 1.1rem 1.15rem;
+            margin: 0.8rem 0;
             background: rgba(255, 255, 255, 0.02);
         }
 
@@ -218,7 +248,7 @@ def load_custom_css():
             margin-bottom: 0.75rem;
         }
 
-        .rewrite-before { margin-top: 0.5rem; opacity: 0.7; font-size: 0.9rem; }
+        .rewrite-before { margin-top: 0.4rem; opacity: 0.7; font-size: 0.9rem; }
         .rewrite-after  { margin-top: 0.25rem; opacity: 0.95; font-size: 0.9rem; color: #c0ffc0; }
 
         .rewrite-rationale {
@@ -240,10 +270,8 @@ load_custom_css()
 # -----------------------------
 DB_PATH = os.path.join(os.path.dirname(__file__), "users.db")
 
-
 def get_conn():
     return sqlite3.connect(DB_PATH, check_same_thread=False)
-
 
 def init_auth_db():
     with get_conn() as conn:
@@ -260,7 +288,6 @@ def init_auth_db():
         )
         conn.commit()
 
-
 def _pbkdf2_hash_password(password: str, salt: bytes | None = None) -> str:
     if salt is None:
         salt = os.urandom(16)
@@ -271,7 +298,6 @@ def _pbkdf2_hash_password(password: str, salt: bytes | None = None) -> str:
         base64.b64encode(salt).decode("utf-8"),
         base64.b64encode(dk).decode("utf-8"),
     )
-
 
 def _verify_password(password: str, stored: str) -> bool:
     try:
@@ -286,10 +312,8 @@ def _verify_password(password: str, stored: str) -> bool:
     except Exception:
         return False
 
-
 def valid_email(email: str) -> bool:
     return bool(re.match(r"^[^@\s]+@[^@\s]+\.[^@\s]+$", email.strip().lower()))
-
 
 def create_user(email: str, name: str, password: str) -> tuple[bool, str]:
     email = email.strip().lower()
@@ -317,7 +341,6 @@ def create_user(email: str, name: str, password: str) -> tuple[bool, str]:
     except Exception as e:
         return False, f"Could not create account: {e}"
 
-
 def authenticate(email: str, password: str) -> tuple[bool, dict | None]:
     email = email.strip().lower()
     if not valid_email(email):
@@ -337,13 +360,11 @@ def authenticate(email: str, password: str) -> tuple[bool, dict | None]:
         return True, {"id": user_id, "email": user_email, "name": user_name}
     return False, None
 
-
 # -----------------------------
 # UI helpers
 # -----------------------------
 def pill(text: str) -> str:
     return f'<span class="skill-pill">{text}</span>'
-
 
 def section_card(title: str, subtitle: str = ""):
     st.markdown(
@@ -356,6 +377,18 @@ def section_card(title: str, subtitle: str = ""):
         unsafe_allow_html=True,
     )
 
+def content_card_start(title: str, subtitle: str = ""):
+    st.markdown(
+        f"""
+        <div class="content-card">
+            <div class="content-card-title">{title}</div>
+            <div class="content-card-subtitle">{subtitle}</div>
+        """,
+        unsafe_allow_html=True,
+    )
+
+def content_card_end():
+    st.markdown("</div>", unsafe_allow_html=True)
 
 def render_product_header():
     st.markdown(
@@ -363,12 +396,11 @@ def render_product_header():
         <div class="product-title">Between the Lines</div>
         <div class="product-subtitle">
             Decode what a job description implies and improve how your resume signals evidence.
-            No ATS-style score — just clarity.
+            No ATS-style score - just clarity.
         </div>
         """,
         unsafe_allow_html=True,
     )
-
 
 def top_actions(direct_matches, missing, implied):
     actions = []
@@ -382,11 +414,9 @@ def top_actions(direct_matches, missing, implied):
         actions = ["Add more specific detail to the JD and resume text so the analyzer can extract stronger signals."]
     return actions[:3]
 
-
 def bullet_list(items):
     for it in items:
         st.write(f"- {it}")
-
 
 # -----------------------------
 # Auth pages
@@ -449,7 +479,6 @@ def auth_gate():
     st.markdown("</div>", unsafe_allow_html=True)
     st.stop()
 
-
 # -----------------------------
 # Main app
 # -----------------------------
@@ -459,8 +488,6 @@ def main_app():
     # Initialize stable state keys for resume input
     if "resume_text_value" not in st.session_state:
         st.session_state["resume_text_value"] = ""
-    if "resume_text_input" not in st.session_state:
-        st.session_state["resume_text_input"] = ""
 
     col1, col2, col3 = st.columns([1, 2, 1])
     with col2:
@@ -501,7 +528,6 @@ def main_app():
             label_visibility="collapsed",
         )
 
-        # If file uploaded, extract into resume_text_value BEFORE the text area is instantiated
         if upload is not None:
             try:
                 extracted, warn = extract_text_from_upload(upload.name, upload.getvalue())
@@ -513,7 +539,6 @@ def main_app():
             except Exception as e:
                 st.error(f"Could not extract text: {e}")
 
-        # Text area uses a separate widget key and uses resume_text_value as its initial value
         resume_text = st.text_area(
             "Or paste resume text",
             height=170,
@@ -523,7 +548,6 @@ def main_app():
             label_visibility="collapsed",
         )
 
-        # Keep the “source of truth” updated from whatever is currently in the box
         st.session_state["resume_text_value"] = resume_text
 
     st.markdown("<br>", unsafe_allow_html=True)
@@ -532,17 +556,17 @@ def main_app():
     if not analyze_btn:
         return
 
-    jd_text = st.session_state.get("jd_text", "")
+    jd_text_val = st.session_state.get("jd_text", "")
     resume_text_final = st.session_state.get("resume_text_value", "")
 
-    if not jd_text.strip():
+    if not jd_text_val.strip():
         st.error("Please paste a job description.")
         return
     if not resume_text_final.strip():
         st.error("Please upload or paste a resume.")
         return
 
-    result = analyze(jd_text, resume_text_final)
+    result = analyze(jd_text_val, resume_text_final)
 
     jd_count = len(result.jd_skills)
     match_count = len(result.direct_matches)
@@ -551,7 +575,7 @@ def main_app():
 
     st.divider()
 
-    section_card("Overview", "A visibility check based on detected signals. This is not a hiring score.")
+    content_card_start("Overview", "A visibility check based on detected signals. This is not a hiring score.")
     c1, c2, c3 = st.columns(3)
     c1.metric("Signal coverage", f"{coverage:.0%}")
     c2.metric("Direct matches", match_count)
@@ -559,31 +583,31 @@ def main_app():
 
     st.progress(min(max(coverage, 0.0), 1.0))
     st.caption("Signal coverage = percent of detected job description signals that also appear in your resume text.")
+    content_card_end()
 
-    st.markdown("### Recommended next steps")
+    content_card_start("Recommended next steps", "Do these first to improve signal and alignment.")
     bullet_list(top_actions(result.direct_matches, result.missing_from_resume, result.implied))
-
-    st.divider()
+    content_card_end()
 
     colA, colB = st.columns(2)
 
     with colA:
-        section_card("Strong signals you already show", "Keep these consistent across Summary, Projects, and Experience.")
+        content_card_start("Strong signals you already show", "Keep these consistent across Summary, Projects, and Experience.")
         if result.direct_matches:
             st.markdown("".join([pill(s) for s in sorted(result.direct_matches)]), unsafe_allow_html=True)
         else:
             st.info("No direct matches detected from the current skill inventory. Add terms in core/skills.py for your target roles.")
+        content_card_end()
 
     with colB:
-        section_card("Signals the job description expects", "Not every gap matters. Prioritize repeated and role-critical signals.")
+        content_card_start("Signals the job description expects", "Not every gap matters. Prioritize repeated and role-critical signals.")
         if result.missing_from_resume:
             st.markdown("".join([pill(s) for s in sorted(result.missing_from_resume)]), unsafe_allow_html=True)
         else:
             st.success("No missing signals detected from the current inventory.")
+        content_card_end()
 
-    st.divider()
-
-    section_card("Implied expectations", "These are operating modes that hiring teams often filter on implicitly.")
+    content_card_start("Implied expectations", "Operating modes hiring teams often filter on implicitly.")
     if result.implied:
         for exp in result.implied:
             with st.expander(exp.jd_trigger, expanded=True):
@@ -593,10 +617,9 @@ def main_app():
                 st.write(exp.how_to_signal)
     else:
         st.info("No implied triggers matched. Add more mappings in core/implied_map.py to reflect your target roles.")
+    content_card_end()
 
-    st.divider()
-
-    section_card("Language upgrades", "Rewrite templates to increase signal without inventing accomplishments.")
+    content_card_start("Language upgrades", "Rewrite templates to increase signal without inventing accomplishments.")
     if result.rewrites:
         for r in result.rewrites:
             st.markdown(
@@ -612,7 +635,7 @@ def main_app():
             )
     else:
         st.success("No weak-phrase patterns detected. Add more rules in core/rewrite_rules.py if you want stricter linting.")
-
+    content_card_end()
 
 # -----------------------------
 # Boot
